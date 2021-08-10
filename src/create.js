@@ -1,13 +1,20 @@
 import React, { useState } from 'react'
 import axios from 'axios'
 import Nav from './nav'
+import ReactQuill from 'react-quill'
+import 'react-quill/dist/quill.bubble.css'
+import { getUser, getToken } from './helper'
 
 const Create = () => {
   const [state, setState] = useState({
     title: '',
-    content: '',
-    user: '',
+    user: getUser(),
   })
+  const [content, setContent] = useState('')
+
+  const handleContent = (e) => {
+    setContent(e)
+  }
 
   const handleChange = (e) => {
     const { value, name } = e.target
@@ -18,27 +25,34 @@ const Create = () => {
   }
 
   const handleSubmit = (e) => {
-    const { title, content, user } = state
+    const { title, user } = state
     e.preventDefault()
     axios
-      .post(`${process.env.REACT_APP_API}/post`, {
-        title,
-        content,
-        user,
-      })
+      .post(
+        `${process.env.REACT_APP_API}/post`,
+        {
+          title,
+          content,
+          user,
+        },
+        {
+          headers: {
+            authorization: `Bearer ${getToken()}`,
+          },
+        }
+      )
       .then((res) => {
         setState({
           title: '',
-          content: '',
           user: '',
         })
+        setContent('')
 
-        console.log(res)
         alert(`Sucessfull Create : ${res.data.title}`)
       })
       .catch((error) => {
-        console.log(error.response)
-        alert(error.response)
+        console.log(error.response.data.error)
+        alert(error.response.data.error)
       })
   }
 
@@ -48,7 +62,7 @@ const Create = () => {
       <br />
       <h1>Create Post</h1>
       <br />
-      <form>
+      <form onSubmit={handleSubmit}>
         <div className='form-group'>
           <label className='text-muted'>Title</label>
           <input
@@ -63,13 +77,14 @@ const Create = () => {
         </div>
         <div className='form-group'>
           <label className='text-muted'>Content</label>
-          <textarea
-            onChange={handleChange}
-            value={state.content}
+          <ReactQuill
+            onChange={handleContent}
             name='content'
             placeholder='Type your content'
-            required
-            className='form-control'
+            className='pb-5 mb-3'
+            value={content}
+            style={{ border: '1px solid #666' }}
+            theme='bubble'
           />
         </div>
         <div className='form-group'>
@@ -85,9 +100,7 @@ const Create = () => {
           />
         </div>
         <div>
-          <button className='btn btn-primary' onClick={handleSubmit}>
-            Submit
-          </button>
+          <button className='btn btn-primary'>Submit</button>
         </div>
       </form>
     </div>

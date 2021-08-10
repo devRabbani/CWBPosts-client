@@ -11,6 +11,14 @@ const Nav = ({ history }) => (
       <li className='nav-item pr-3 pt-3 pb-3'>
         <Link to='/create'>Create</Link>
       </li>
+      {getUser() && (
+        <li
+          className='nav-item ml-auto pr-3 pt-3 pb-3'
+          style={{ color: 'green' }}
+        >
+          {getUser()}
+        </li>
+      )}
 
       {!getUser() && (
         <li className='nav-item ml-auto pr-3 pt-3 pb-3'>
@@ -21,7 +29,7 @@ const Nav = ({ history }) => (
       {getUser() && (
         <li
           onClick={() => removeToken(() => history.push('/'))}
-          className='nav-item ml-auto pr-3 pt-3 pb-3'
+          className='nav-item pr-3 pt-3 pb-3'
           style={{ cursor: 'pointer' }}
         >
           Logout

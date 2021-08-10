@@ -1,14 +1,21 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import Nav from './nav'
+import ReactQuill from 'react-quill'
+import 'react-quill/dist/quill.bubble.css'
+import { getToken } from './helper'
 
 const UpdatePost = (props) => {
   const [posts, setPosts] = useState({
     title: '',
-    content: '',
     user: '',
     slug: '',
   })
+  const [content, setContent] = useState('')
+
+  const handleContent = (e) => {
+    setContent(e)
+  }
 
   const handleChange = (e) => {
     const { value, name } = e.target
@@ -19,14 +26,22 @@ const UpdatePost = (props) => {
   }
 
   const handleSubmit = (e) => {
-    const { title, content, user, slug } = posts
+    const { title, user, slug } = posts
     e.preventDefault()
     axios
-      .put(`${process.env.REACT_APP_API}/post/${slug}`, {
-        title,
-        content,
-        user,
-      })
+      .put(
+        `${process.env.REACT_APP_API}/post/${slug}`,
+        {
+          title,
+          content,
+          user,
+        },
+        {
+          headers: {
+            authorization: `Bearer ${getToken()}`,
+          },
+        }
+      )
       .then((res) => {
         const { title, content, user, slug } = res.data
         setPosts({
@@ -53,10 +68,10 @@ const UpdatePost = (props) => {
         setPosts({
           ...posts,
           title,
-          content,
           slug,
           user,
         })
+        setContent(content)
       })
       .catch((err) => {
         alert('Did not find post Error!')
@@ -83,13 +98,15 @@ const UpdatePost = (props) => {
         </div>
         <div className='form-group'>
           <label className='text-muted'>Content</label>
-          <textarea
-            onChange={handleChange}
-            value={posts.content}
+          <ReactQuill
+            onChange={handleContent}
+            value={content}
+            theme='bubble'
             name='content'
             placeholder='Type your content'
             required
-            className='form-control'
+            className='pb-5 mb-3'
+            style={{ border: '1px solid #666' }}
           />
         </div>
         <div className='form-group'>
