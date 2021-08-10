@@ -46,7 +46,7 @@ const App = () => {
     <div className='container pb-5'>
       <Nav />
       <br />
-      <h1>MERN BLOG</h1>
+      <h1>CWB POSTS</h1>
       <hr />
       {posts.map((post, i) => (
         <div
