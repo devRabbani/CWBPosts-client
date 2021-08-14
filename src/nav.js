@@ -4,16 +4,17 @@ import { getUser, removeToken } from './helper'
 
 const Nav = ({ history }) => (
   <nav>
-    <ul className='nav nav-tabs'>
-      <li className='nav-item pr-3 pt-3 pb-3'>
-        <Link to='/'>Home</Link>
+    <div className="container">
+    <ul className='nav'>
+    <li>
+        <Link to='/'>CWBPosts</Link>
       </li>
-      <li className='nav-item pr-3 pt-3 pb-3'>
+      <li>
         <Link to='/create'>Create</Link>
       </li>
       {getUser() && (
         <li
-          className='nav-item ml-auto pr-3 pt-3 pb-3'
+          className='nav-item'
           style={{ color: 'green' }}
         >
           {getUser()}
@@ -21,7 +22,7 @@ const Nav = ({ history }) => (
       )}
 
       {!getUser() && (
-        <li className='nav-item ml-auto pr-3 pt-3 pb-3'>
+        <li className='nav-item'>
           <Link to='/login'>Login</Link>
         </li>
       )}
@@ -29,13 +30,15 @@ const Nav = ({ history }) => (
       {getUser() && (
         <li
           onClick={() => removeToken(() => history.push('/'))}
-          className='nav-item pr-3 pt-3 pb-3'
+          className='nav-item'
           style={{ cursor: 'pointer' }}
         >
           Logout
         </li>
       )}
     </ul>
+    </div>
+    
   </nav>
 )
 

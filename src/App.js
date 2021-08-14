@@ -4,6 +4,7 @@ import axios from 'axios'
 import { Link } from 'react-router-dom'
 import renderHTML from 'react-render-html'
 import { getToken, getUser } from './helper'
+import Footer from './Footer'
 
 const App = () => {
   const [posts, setPosts] = useState([])
@@ -43,15 +44,16 @@ const App = () => {
   }, [])
 
   return (
-    <div className='container pb-5'>
+    <div className='mainContainer'>
       <Nav />
       <br />
-      <h1>CWB POSTS</h1>
+      <div className="container mainDiv">
+      <h1>Recent Posts</h1>
       <hr />
       {posts.map((post, i) => (
         <div
           key={i}
-          className='row'
+          className='card'
           style={{ borderBottom: '1px solid silver' }}
         >
           <div className='col pt-3 pb-2'>
@@ -91,6 +93,8 @@ const App = () => {
           </div>
         </div>
       ))}
+      </div>
+      <Footer/>
     </div>
   )
 }
