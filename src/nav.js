@@ -6,7 +6,7 @@ const Nav = ({ history }) => (
   <nav>
     <div className="container">
     <ul className='nav'>
-    <li>
+    <li className="logo">
         <Link to='/'>CWBPosts</Link>
       </li>
       <li>

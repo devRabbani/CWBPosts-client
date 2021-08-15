@@ -51,8 +51,11 @@ const App = () => {
       <Nav />
       <div className="mainDiv">
       <div className='backgroundCard'>
+        <div className="container home">
         <h1 className='h1'>Welcome To CWBPosts</h1>
-        <p>Here you will find some great articles about tech,study,lifestyle etc.</p>
+        <p>Here you will find some great articles about tech,study,lifestyle etc.Feel free to contribute and read here for mor info connect to CanWeBe.</p>
+        </div>
+       
       </div>
       <div className='container'>
         <h3>Recent Posts</h3>
@@ -71,13 +74,15 @@ const App = () => {
                 {renderHTML(post.content.substring(0, 150)+(post.content.length>200 ? '....':''))}
               </div>
               </div>
-              <p className='authorDetails small'>
-                Author : <span className='badge smallBadge'>{post.user}</span> , Published
+              <div className='authorDetails small'>
+                <div>Author : <span className='badge smallBadge'>{post.user}</span>,&nbsp;</div>
+                <div>Published
                 On :{' '}
                 <span className='badge smallBadge'>
                   {new Date(post.createdAt).toLocaleString()}
-                </span>
-              </p>
+                </span></div>
+                
+              </div>
            
             {getUser() && (
               <div className='btnDiv'>

@@ -4,6 +4,9 @@
  box-sizing: border-box;
  scroll-behavior: smooth;
 }
+html{
+ font-size:62.5%;
+}
 body {
  font-family: 'Roboto Mono', monospace;
  background-color: aliceblue;
@@ -15,13 +18,20 @@ a{
 
 h1.h1{
  text-align: center;
- font-size: 34px;
+ font-size: 3.4rem;
  margin: 15px auto 10px;
 }
 h2.h2{
- font-size: 29px;
+ font-size: 2.9rem;
+}
+.home p{
+ font-size: 1.6rem;
+ line-height: 27px;
 }
 
+div.home{
+ width: 55%;
+}
 
 ul{
  list-style: none;
@@ -45,22 +55,37 @@ nav{
 ul.nav{
  display: flex;
  justify-content: flex-start;
- /* padding: 10px; */
+ align-items: center;
 }
 
-ul.nav li{
- padding: 13px 20px;
- background-color: burlywood;
+.nav li{
+ font-size: 1.8rem;
+ padding: 15px 20px 13px;
+ transition: all 0.3s ease-in-out;
 }
+
+
+.nav li:hover{
+ background-color: rgba(128, 128, 128, 0.432);
+}
+
+
+
 
 .nav-item{
  margin-left: auto;
 }
 
-ul.nav li:nth-child(1){
+li.logo{
  background-color: transparent;
  font-weight: bold;
- font-size: 20px;
+ font-size: 3rem;
+ margin-right: 35px;
+ padding: 0;
+}
+
+li.logo:hover{
+ background-color: white;
 }
 
 .card{
@@ -121,6 +146,7 @@ width: 90%;
  margin-bottom: 15px;
  font-weight: bold;
  line-height: 27px;
+ font-size: 1.5rem;
 }
 
 .content{
@@ -132,7 +158,7 @@ width: 90%;
  background-color: rgb(49, 20, 209);
  color: rgb(253, 253, 253);
  padding: 2px 5px;
- font-size: 14px;
+ font-size: 1.4rem;
 }
 
 
@@ -146,40 +172,42 @@ width: 90%;
 }
 
 .cardContent h1{
- font-size: 20px;
+ font-size: 2rem;
 }
 
 .cardContent h2{
- font-size: 17px;
+ font-size: 1.7rem;
 }
 
 .cardContent p{
- font-size: 15px;
+ font-size: 1.5rem;
 }
 
-.small{
- font-size: 14px;
+div.small{
+ font-size: 1.4rem;
  word-spacing: -3px;
+ display: flex;
+ flex-wrap: wrap;
 }
 
 .smallBadge{
- font-size: 12px;
+ font-size: 1.2rem;
 }
 
 .content h1{
- font-size: 29px;
+ font-size: 2.9rem;
  font-weight: 600;
 }
 .content h2{
- font-size: 23px;
+ font-size: 2.3rem;
 }
 
 .content p{
- font-size: 16px;
+ font-size: 1.6rem;
  line-height: 27px;
 }
 .btnDiv{
-font-size: 14px;
+font-size: 1.4rem;
 }
 .btnUpdate{
  padding: 5px 10px;
@@ -227,7 +255,7 @@ box-shadow: 1px 2px 10px rgba(100, 100, 100, 0.5);
 
 
 .mainH1Hr{
- width: 500px;
+ width: 50%;
  height: 3px;
  background-color:blueviolet ;
  border: none;
@@ -238,7 +266,7 @@ box-shadow: 1px 2px 10px rgba(100, 100, 100, 0.5);
 h3{
  text-align: center;
  margin: 15px auto 10px;
- font-size: 26px;
+ font-size: 2.6rem;
  font-weight: 400;
 }
 
@@ -250,7 +278,7 @@ h1.createH1{
 .createH1::after{
  content: ' ';
  display: block;
- width: 500px;
+ width: 50%;
  height: 3px;
  background-color:blueviolet ;
  margin:10px auto ;
@@ -280,13 +308,13 @@ h1.createH1{
 }
 
 label{
- font-size: 18px;
+ font-size: 1.8rem;
  margin-bottom: 7px;
 }
 
 input{
  padding: 8px 20px;
- font-size: 17px;
+ font-size: 1.7rem;
 }
 .text-muted{
  opacity: 0.5;
@@ -316,3 +344,103 @@ input{
  margin-top: 80px;
 }
 
+@media screen and (max-width:1038px){
+.formCard{
+ width: 100%;
+}
+}
+
+@media screen and (max-width:930px){
+ .card{
+  width: 100%;
+ }
+.login .formCard{
+ width: 80%;
+}
+div.home{
+ width: 75%;
+}
+
+ }
+
+
+ @media screen and (max-width:740px){
+  .container{
+   width: 90%;
+  }
+
+  li.logo{
+   margin-right: 10px;
+  }
+.singlePostCard{
+ width: 96%;
+}
+
+  }
+
+  @media screen and (max-width:650px){
+   html{
+    font-size: 50%;
+   }
+   .home p{
+    font-size: 1.6rem;
+    line-height: 20px;
+   }
+ 
+   }
+
+
+   @media screen and (max-width:430px){
+   
+   .container{
+    width: 94%;
+   }
+
+    .singlePostCard{
+     width: 100%;
+     padding: 25px;
+    }
+
+
+.content p {
+    line-height: 23px;
+}
+
+.card{
+ width: 96%;
+}
+.formCard{
+ padding: 25px;
+}
+
+
+.login .formCard{
+ width: 97%;
+ padding: 40px 20px;
+}
+
+.btnSignin,.btnSubmit{
+ width: 100%;
+ padding:8px 30px ;
+}
+.btnSubmit{
+ margin-top: 7px;
+}
+
+
+    }
+
+
+   @media screen and (max-width:413px){
+   
+  div.home{
+   width: 90%;
+  }
+  .backgroundCard {
+   padding-top: 70px;
+}
+  
+ 
+  
+  
+      }
