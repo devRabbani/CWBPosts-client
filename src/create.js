@@ -4,6 +4,7 @@ import Nav from './nav'
 import ReactQuill from 'react-quill'
 import 'react-quill/dist/quill.bubble.css'
 import { getUser, getToken } from './helper'
+import Footer from './Footer'
 
 const Create = () => {
   const [state, setState] = useState({
@@ -57,11 +58,11 @@ const Create = () => {
   }
 
   return (
-    <div className='container pb-5'>
+    <div>
       <Nav />
-      <br />
-      <h1>Create Post</h1>
-      <br />
+      <div className="container mainDiv">
+      <h1 className='h1 createH1'>Create Post</h1>
+      <div className="formCard">
       <form onSubmit={handleSubmit}>
         <div className='form-group'>
           <label className='text-muted'>Title</label>
@@ -81,9 +82,8 @@ const Create = () => {
             onChange={handleContent}
             name='content'
             placeholder='Type your content'
-            className='pb-5 mb-3'
             value={content}
-            style={{ border: '1px solid #666' }}
+            style={{ border: '1px solid #666',padding:'7px',minHeight:'150px'}}
             theme='bubble'
           />
         </div>
@@ -100,9 +100,13 @@ const Create = () => {
           />
         </div>
         <div>
-          <button className='btn btn-primary'>Submit</button>
+          <button className='btnSubmit'>Submit</button>
         </div>
       </form>
+      </div>
+     
+      </div>
+      <Footer/>
     </div>
   )
 }

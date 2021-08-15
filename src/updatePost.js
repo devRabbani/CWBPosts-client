@@ -4,6 +4,7 @@ import Nav from './nav'
 import ReactQuill from 'react-quill'
 import 'react-quill/dist/quill.bubble.css'
 import { getToken } from './helper'
+import Footer from './Footer'
 
 const UpdatePost = (props) => {
   const [posts, setPosts] = useState({
@@ -79,10 +80,11 @@ const UpdatePost = (props) => {
   }, [])
 
   return (
-    <div className='container pb-5'>
+    <div>
       <Nav />
-      <br />
-      <h1>UPDATE POST</h1>
+      <div className="container mainDiv">
+      <h1 className='h1 createH1'>UPDATE POST</h1>
+      <div className="formCard">
       <form>
         <div className='form-group'>
           <label className='text-muted'>Title</label>
@@ -122,11 +124,15 @@ const UpdatePost = (props) => {
           />
         </div>
         <div>
-          <button className='btn btn-primary' onClick={handleSubmit}>
+          <button className='btnSubmit' onClick={handleSubmit}>
             Update
           </button>
         </div>
       </form>
+      </div>
+      
+      </div>
+      <Footer/>
     </div>
   )
 }

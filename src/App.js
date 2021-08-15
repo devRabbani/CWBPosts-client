@@ -8,12 +8,15 @@ import Footer from './Footer'
 
 const App = () => {
   const [posts, setPosts] = useState([])
+  const [loading, setLoading] = useState(true)
 
   const fetchPost = () => {
     axios
       .get(`${process.env.REACT_APP_API}/post`)
       .then((res) => {
         setPosts(res.data)
+        window.scrollTo(0,0)
+        setLoading(false)
       })
       .catch((error) => {
         alert('Error on fetching posts')
@@ -44,57 +47,60 @@ const App = () => {
   }, [])
 
   return (
-    <div className='mainContainer'>
+    <div>
       <Nav />
-      <br />
-      <div className="container mainDiv">
-      <h1>Recent Posts</h1>
-      <hr />
-      {posts.map((post, i) => (
-        <div
-          key={i}
-          className='card'
-          style={{ borderBottom: '1px solid silver' }}
-        >
-          <div className='col pt-3 pb-2'>
-            <div className='row'>
-              <div className='col-md-10'>
-                <Link to={`/post/${post.slug}`}>
-                  <h2>{post.title}</h2>
-                </Link>
-
-                <div className='lead pt-3'>
-                  {renderHTML(post.content.substring(0, 100))}
-                </div>
-                <p>
-                  Author <span className='badge'>{post.user}</span> Published on{' '}
-                  <span className='badge'>
-                    {new Date(post.createdAt).toLocaleString()}
-                  </span>
-                </p>
-              </div>
-              {getUser() && (
-                <div className='col-md-2'>
-                  <Link
-                    to={`/post/update/${post.slug}`}
-                    className='btn btn-sm btn-outline-primary'
-                  >
-                    Update
-                  </Link>
-                  <button
-                    onClick={() => handleDelete(post.slug)}
-                    className='btn btn-sm btn-outline-danger ml-1'
-                  >
-                    Delete
-                  </button>
-                </div>
-              )}
-            </div>
-          </div>
-        </div>
-      ))}
+      <div className="mainDiv">
+      <div className='backgroundCard'>
+        <h1 className='h1'>Welcome To CWBPosts</h1>
+        <p>Here you will find some great articles about tech,study,lifestyle etc.</p>
       </div>
-      <Footer/>
+      <div className='container'>
+        <h3>Recent Posts</h3>
+        <hr className='mainH1Hr'/>
+        {loading ? <h3 className='loading'>Loading...</h3> :   posts.map((post, i) => (
+          <div
+            key={i}
+            className='card'
+            style={{ borderBottom: '1px solid silver' }}
+          >
+            <div className='previewPost'>
+              <Link to={`/post/${post.slug}`}>
+                <h2 className='h2'>{post.title}</h2>
+              </Link>
+              <div className='cardContent'>
+                {renderHTML(post.content.substring(0, 150)+(post.content.length>200 ? '....':''))}
+              </div>
+              </div>
+              <p className='authorDetails small'>
+                Author : <span className='badge smallBadge'>{post.user}</span> , Published
+                On :{' '}
+                <span className='badge smallBadge'>
+                  {new Date(post.createdAt).toLocaleString()}
+                </span>
+              </p>
+           
+            {getUser() && (
+              <div className='btnDiv'>
+                <Link
+                  to={`/post/update/${post.slug}`}
+                  className='btnUpdate'
+                >
+                  Update
+                </Link>
+                <a
+                  onClick={() => handleDelete(post.slug)}
+                  className='btnDelete'
+                >
+                  Delete
+                </a>
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
+      </div>
+      
+      <Footer />
     </div>
   )
 }

@@ -2,18 +2,24 @@
  margin: 0;
  padding: 0;
  box-sizing: border-box;
+ scroll-behavior: smooth;
 }
-body{
- background-color: rgb(196, 196, 196);
+body {
  font-family: 'Roboto Mono', monospace;
+ background-color: aliceblue;
 }
 a{
  text-decoration: none;
  color: black;
 }
 
-h1{
+h1.h1{
  text-align: center;
+ font-size: 34px;
+ margin: 15px auto 10px;
+}
+h2.h2{
+ font-size: 29px;
 }
 
 
@@ -21,12 +27,13 @@ ul{
  list-style: none;
 }
 
-.mainContainer{
- margin: 0 auto;
-}
 
 nav{
  background-color: rgb(255, 255, 255);
+ box-shadow: 0 2px 10px black;
+ z-index: 9;
+ position: fixed;
+ width: 100%;
 }
 
 .container{
@@ -57,19 +64,20 @@ ul.nav li:nth-child(1){
 }
 
 .card{
- background-color: whitesmoke;
- padding: 40px;
+ background-color: white;
+ padding: 30px;
  margin:0 auto;
  margin-top: 30px;
  width: 80%;
+ box-shadow: 2px 5px 10px rgba(88, 88, 88, 0.534);
 }
 
 .mainDiv{
- min-height: 90vh;
+ min-height: 89vh;
 }
 .footer{
  background-color: black;
- margin-top: 35px;
+ margin-top: 45px;
 }
 
 .footer p{
@@ -77,3 +85,234 @@ color: white;
 text-align: center;
 padding: 10px;
 }
+
+
+.singlePostCard{
+ background-color: white;
+ padding: 40px;
+ margin: 40px auto 0;
+width: 90%;
+ box-shadow: 2px 5px 10px rgba(88, 88, 88, 0.534);
+}
+
+.backgroundCard{
+ height: 300px;
+ padding-top: 100px;
+ text-align: center;
+ color: ghostwhite;
+ background-color: blueviolet;
+}
+
+.singleBgCard{
+ height: 480px;
+}
+
+.singleNegMargin{
+ margin-top: -360px;
+}
+
+
+
+.singleH1{
+ color: white;
+}
+
+.authorDetails{
+ margin-bottom: 15px;
+ font-weight: bold;
+ line-height: 27px;
+}
+
+.content{
+ margin-top: 30px;
+}
+
+.badge{
+ border-radius: 20px;
+ background-color: rgb(49, 20, 209);
+ color: rgb(253, 253, 253);
+ padding: 2px 5px;
+ font-size: 14px;
+}
+
+
+.cardContent{
+ border: 1px solid black;
+ border-left: none;
+ border-right: none;
+ padding: 15px 0;
+ margin: 15px 0 10px;
+ color: blueviolet;
+}
+
+.cardContent h1{
+ font-size: 20px;
+}
+
+.cardContent h2{
+ font-size: 17px;
+}
+
+.cardContent p{
+ font-size: 15px;
+}
+
+.small{
+ font-size: 14px;
+ word-spacing: -3px;
+}
+
+.smallBadge{
+ font-size: 12px;
+}
+
+.content h1{
+ font-size: 29px;
+ font-weight: 600;
+}
+.content h2{
+ font-size: 23px;
+}
+
+.content p{
+ font-size: 16px;
+ line-height: 27px;
+}
+.btnDiv{
+font-size: 14px;
+}
+.btnUpdate{
+ padding: 5px 10px;
+ border-radius: 3px;
+ color: rgb(0, 0, 0);
+ border: 2px solid rgb(28, 212, 11);
+ box-shadow: 1px 2px 10px rgba(255, 255, 255, 0.5);
+ transition: all 0.3s ease-in-out;
+}
+
+.btnUpdate:hover{
+background-color:rgb(28, 212, 11) ;
+color: white;
+box-shadow: 1px 2px 10px rgba(100, 100, 100, 0.5);
+}
+.btnUpdate:active{
+ background-color: rgb(16, 150, 3);
+ border: 2px solid rgb(16, 150, 3);
+ box-shadow: 1px 2px 10px rgba(100, 100, 100, 0);
+}
+
+
+.btnDelete{
+ background-color: rgb(255, 0, 0);
+ padding: 5px 10px;
+ border: 2px solid red;
+ border-radius: 3px;
+ color: white;
+ cursor: pointer;
+ box-shadow: 1px 2px 10px rgba(100, 100, 100, 0.5);
+ margin-left: 10px;
+ transform: translateY(-5px);
+ transition: all 0.3s ease-in-out;
+}
+
+.btnDelete:hover{
+ background-color: rgb(212, 8, 8);
+ border-color: rgb(212, 8, 8);
+}
+
+.btnDelete:active{
+ box-shadow: none;
+ background-color: rgb(255, 69, 69);
+}
+
+
+.mainH1Hr{
+ width: 500px;
+ height: 3px;
+ background-color:blueviolet ;
+ border: none;
+ margin:0 auto ;
+}
+
+
+h3{
+ text-align: center;
+ margin: 15px auto 10px;
+ font-size: 26px;
+ font-weight: 400;
+}
+
+h1.createH1{
+ margin-top: 0px;
+ padding-top: 90px;
+}
+
+.createH1::after{
+ content: ' ';
+ display: block;
+ width: 500px;
+ height: 3px;
+ background-color:blueviolet ;
+ margin:10px auto ;
+}
+
+.formCard{
+ box-shadow: 2px 3px 10px rgba(88, 88, 88, 0.534);
+ padding: 25px 35px;
+ width: 70%;
+ margin: 38px auto;
+ background-color: white;
+}
+
+.btnSubmit{
+ padding: 9px 35px;
+ background-color: blue;
+ color: white;
+ font-size: 17px;
+ border: none;
+ cursor: pointer;
+}
+
+.form-group{
+ display: flex;
+ flex-direction: column;
+ margin-bottom: 10px;
+}
+
+label{
+ font-size: 18px;
+ margin-bottom: 7px;
+}
+
+input{
+ padding: 8px 20px;
+ font-size: 17px;
+}
+.text-muted{
+ opacity: 0.5;
+}
+
+.btnSignin{
+ font-size: 18px;
+ background-color: white;
+ padding: 6px 30px;
+ color: green;
+}
+
+.login .formCard{
+ width: 50%;
+ padding: 30px 50px;
+}
+
+.login .form-group{
+ margin-bottom: 20px;
+}
+
+.login .createH1{
+ padding-top: 120px;
+}
+
+.loading{
+ margin-top: 80px;
+}
+

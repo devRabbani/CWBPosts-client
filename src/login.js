@@ -42,11 +42,11 @@ const Login = ({ history }) => {
   }, [])
 
   return (
-    <div className='container pb-5'>
+    <div className="login">
       <Nav />
-      <br />
-      <h1>LOGIN</h1>
-      <br />
+      <div className="container">
+      <h1 className='h1 createH1'>LOGIN</h1>
+      <div className="formCard">
       <form>
         <div className='form-group'>
           <label className='text-muted'>Name</label>
@@ -74,11 +74,15 @@ const Login = ({ history }) => {
         </div>
 
         <div>
-          <button className='btn btn-primary' onClick={handleSubmit}>
+          <button className='btnUpdate btnSignin' onClick={handleSubmit}>
             Signin
           </button>
         </div>
       </form>
+      </div>
+      
+      </div>
+      
     </div>
   )
 }

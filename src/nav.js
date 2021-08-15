@@ -12,15 +12,6 @@ const Nav = ({ history }) => (
       <li>
         <Link to='/create'>Create</Link>
       </li>
-      {getUser() && (
-        <li
-          className='nav-item'
-          style={{ color: 'green' }}
-        >
-          {getUser()}
-        </li>
-      )}
-
       {!getUser() && (
         <li className='nav-item'>
           <Link to='/login'>Login</Link>

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import Nav from './nav'
 import renderHTML from 'react-render-html'
+import Footer from './Footer'
 
 const SinglePost = (props) => {
   const [post, setPost] = useState('')
@@ -9,32 +10,40 @@ const SinglePost = (props) => {
   useEffect(() => {
     axios
       .get(`${process.env.REACT_APP_API}/post/${props.match.params.slug}`)
-      .then((res) => setPost(res.data))
+      .then((res) => {setPost(res.data)
+       window.scrollTo(0,0)
+      })
       .catch((err) => {
         alert('Did not find post Error!')
       })
   }, [])
 
+
+
   const showPost = () => (
-    <div className='row'>
-      <div className='col-md-8 offset-md-2 pt-3 pb-2'>
-        <h1>{post.title}</h1>
-        <p>
-          Author <span className='badge'>{post.user}</span> Published on{' '}
-          <span className='badge'>
+    <div className='container singleNegMargin'>
+        <h1 className='singleH1 h1'>{post.title}</h1>
+        <div className="singlePostCard">
+        <p className="authorDetails">
+          Author : <span className='badge'>{post.user}</span><br/> Published On :{' '}<span className='badge'>
             {new Date(post.createdAt).toLocaleString()}
           </span>
         </p>
-        <div className='lead pt-3'>{renderHTML(post.content)}</div>
-      </div>
+        <hr/>
+        <div className='content'>{renderHTML(post.content)}</div>
+        </div>
+        
     </div>
   )
 
   return (
-    <div className='container pb-5'>
+    <div>
       <Nav />
-      <br />
+      <div className='backgroundCard singleBgCard'></div>
+      <div className="mainDiv">
       {post && showPost()}
+      </div>
+      <Footer/>
     </div>
   )
 }
