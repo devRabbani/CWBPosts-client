@@ -1,446 +1,476 @@
-*{
- margin: 0;
- padding: 0;
- box-sizing: border-box;
- scroll-behavior: smooth;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  -webkit-tap-highlight-color: transparent;
 }
-html{
- font-size:62.5%;
+html {
+  font-size: 62.5%;
 }
 body {
- font-family: 'Roboto Mono', monospace;
- background-color: aliceblue;
+  font-family: 'Roboto Mono', monospace;
+  background-color: aliceblue;
 }
-a{
- text-decoration: none;
- color: black;
-}
-
-h1.h1{
- text-align: center;
- font-size: 3.4rem;
- margin: 15px auto 10px;
-}
-h2.h2{
- font-size: 2.9rem;
-}
-.home p{
- font-size: 1.6rem;
- line-height: 27px;
+a {
+  text-decoration: none;
+  color: black;
 }
 
-div.home{
- width: 55%;
+h1.h1 {
+  text-align: center;
+  font-size: 3.4rem;
+  margin: 15px auto 10px;
+}
+h2.h2 {
+  font-size: 2.9rem;
+}
+.home p {
+  font-size: 1.6rem;
+  line-height: 27px;
 }
 
-ul{
- list-style: none;
+div.home {
+  width: 55%;
 }
 
-
-nav{
- background-color: rgb(255, 255, 255);
- box-shadow: 0 2px 10px black;
- z-index: 9;
- position: fixed;
- width: 100%;
+ul {
+  list-style: none;
 }
 
-.container{
- max-width: 1500px;
- width: 80%;
- margin: 0 auto;
-}
-
-ul.nav{
- display: flex;
- justify-content: flex-start;
- align-items: center;
-}
-
-.nav li{
- font-size: 1.8rem;
- padding: 15px 20px 13px;
- transition: all 0.3s ease-in-out;
-}
-
-
-.nav li:hover{
- background-color: rgba(128, 128, 128, 0.432);
-}
-
-
-
-
-.nav-item{
- margin-left: auto;
-}
-
-li.logo{
- background-color: transparent;
- font-weight: bold;
- font-size: 3rem;
- margin-right: 35px;
- padding: 0;
-}
-
-li.logo:hover{
- background-color: white;
-}
-
-.card{
- background-color: white;
- padding: 30px;
- margin:0 auto;
- margin-top: 30px;
- width: 80%;
- box-shadow: 2px 5px 10px rgba(88, 88, 88, 0.534);
-}
-
-.mainDiv{
- min-height: 89vh;
-}
-.footer{
- background-color: black;
- margin-top: 45px;
-}
-
-.footer p{
-color: white;
-text-align: center;
-padding: 10px;
-}
-
-
-.singlePostCard{
- background-color: white;
- padding: 40px;
- margin: 40px auto 0;
-width: 90%;
- box-shadow: 2px 5px 10px rgba(88, 88, 88, 0.534);
-}
-
-.backgroundCard{
- height: 300px;
- padding-top: 100px;
- text-align: center;
- color: ghostwhite;
- background-color: blueviolet;
-}
-
-.singleBgCard{
- height: 480px;
-}
-
-.singleNegMargin{
- margin-top: -360px;
-}
-
-
-
-.singleH1{
- color: white;
-}
-
-.authorDetails{
- margin-bottom: 15px;
- font-weight: bold;
- line-height: 27px;
- font-size: 1.5rem;
-}
-
-.content{
- margin-top: 30px;
-}
-
-.badge{
- border-radius: 20px;
- background-color: rgb(49, 20, 209);
- color: rgb(253, 253, 253);
- padding: 2px 5px;
- font-size: 1.4rem;
-}
-
-
-.cardContent{
- border: 1px solid black;
- border-left: none;
- border-right: none;
- padding: 15px 0;
- margin: 15px 0 10px;
- color: blueviolet;
-}
-
-.cardContent h1{
- font-size: 2rem;
-}
-
-.cardContent h2{
- font-size: 1.7rem;
-}
-
-.cardContent p{
- font-size: 1.5rem;
-}
-
-div.small{
- font-size: 1.4rem;
- word-spacing: -3px;
- display: flex;
- flex-wrap: wrap;
-}
-
-.smallBadge{
- font-size: 1.2rem;
-}
-
-.content h1{
- font-size: 2.9rem;
- font-weight: 600;
-}
-.content h2{
- font-size: 2.3rem;
-}
-
-.content p{
- font-size: 1.6rem;
- line-height: 27px;
-}
-.btnDiv{
-font-size: 1.4rem;
-}
-.btnUpdate{
- padding: 5px 10px;
- border-radius: 3px;
- color: rgb(0, 0, 0);
- border: 2px solid rgb(28, 212, 11);
- box-shadow: 1px 2px 10px rgba(255, 255, 255, 0.5);
- transition: all 0.3s ease-in-out;
-}
-
-.btnUpdate:hover{
-background-color:rgb(28, 212, 11) ;
-color: white;
-box-shadow: 1px 2px 10px rgba(100, 100, 100, 0.5);
-}
-.btnUpdate:active{
- background-color: rgb(16, 150, 3);
- border: 2px solid rgb(16, 150, 3);
- box-shadow: 1px 2px 10px rgba(100, 100, 100, 0);
-}
-
-
-.btnDelete{
- background-color: rgb(255, 0, 0);
- padding: 5px 10px;
- border: 2px solid red;
- border-radius: 3px;
- color: white;
- cursor: pointer;
- box-shadow: 1px 2px 10px rgba(100, 100, 100, 0.5);
- margin-left: 10px;
- transform: translateY(-5px);
- transition: all 0.3s ease-in-out;
-}
-
-.btnDelete:hover{
- background-color: rgb(212, 8, 8);
- border-color: rgb(212, 8, 8);
-}
-
-.btnDelete:active{
- box-shadow: none;
- background-color: rgb(255, 69, 69);
-}
-
-
-.mainH1Hr{
- width: 50%;
- height: 3px;
- background-color:blueviolet ;
- border: none;
- margin:0 auto ;
-}
-
-
-h3{
- text-align: center;
- margin: 15px auto 10px;
- font-size: 2.6rem;
- font-weight: 400;
-}
-
-h1.createH1{
- margin-top: 0px;
- padding-top: 90px;
-}
-
-.createH1::after{
- content: ' ';
- display: block;
- width: 50%;
- height: 3px;
- background-color:blueviolet ;
- margin:10px auto ;
-}
-
-.formCard{
- box-shadow: 2px 3px 10px rgba(88, 88, 88, 0.534);
- padding: 25px 35px;
- width: 70%;
- margin: 38px auto;
- background-color: white;
-}
-
-.btnSubmit{
- padding: 9px 35px;
- background-color: blue;
- color: white;
- font-size: 17px;
- border: none;
- cursor: pointer;
-}
-
-.form-group{
- display: flex;
- flex-direction: column;
- margin-bottom: 10px;
-}
-
-label{
- font-size: 1.8rem;
- margin-bottom: 7px;
-}
-
-input{
- padding: 8px 20px;
- font-size: 1.7rem;
-}
-.text-muted{
- opacity: 0.5;
-}
-
-.btnSignin{
- font-size: 18px;
- background-color: white;
- padding: 6px 30px;
- color: green;
-}
-
-.login .formCard{
- width: 50%;
- padding: 30px 50px;
-}
-
-.login .form-group{
- margin-bottom: 20px;
-}
-
-.login .createH1{
- padding-top: 120px;
-}
-
-.loading{
- margin-top: 80px;
-}
-
-@media screen and (max-width:1038px){
-.formCard{
- width: 100%;
-}
-}
-
-@media screen and (max-width:930px){
- .card{
+nav {
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 2px 10px black;
+  z-index: 9;
+  position: fixed;
   width: 100%;
- }
-.login .formCard{
- width: 80%;
-}
-div.home{
- width: 75%;
 }
 
- }
-
-
- @media screen and (max-width:740px){
-  .container{
-   width: 90%;
-  }
-
-  li.logo{
-   margin-right: 10px;
-  }
-.singlePostCard{
- width: 96%;
+.container {
+  max-width: 1500px;
+  width: 80%;
+  margin: 0 auto;
 }
 
-  }
+ul.nav {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
 
-  @media screen and (max-width:650px){
-   html{
-    font-size: 50%;
-   }
-   .home p{
-    font-size: 1.6rem;
-    line-height: 20px;
-   }
- 
-   }
+.nav-item {
+  font-size: 1.8rem;
+  padding: 15px 20px 13px;
+  transition: all 0.3s ease-in-out;
+}
 
+.nav-item:hover {
+  background-color: rgba(128, 128, 128, 0.432);
+}
 
-   @media screen and (max-width:430px){
-   
-   .container{
-    width: 94%;
-   }
+.navMl {
+  margin-left: auto;
+}
 
-    .singlePostCard{
-     width: 100%;
-     padding: 25px;
-    }
+li.logo {
+  background-color: transparent;
+  font-weight: bold;
+  font-size: 3rem;
+  margin-right: 35px;
+  padding: 0;
+}
 
+li.logo:hover {
+  background-color: white;
+}
+
+.card {
+  background-color: white;
+  padding: 30px;
+  margin: 0 auto;
+  margin-top: 30px;
+  width: 80%;
+  box-shadow: 2px 5px 10px rgba(88, 88, 88, 0.534);
+}
+
+.mainDiv {
+  min-height: 89vh;
+}
+.footer {
+  background-color: black;
+  margin-top: 45px;
+}
+
+.footer p {
+  color: rgba(255, 255, 255, 0.74);
+  text-align: center;
+  padding: 10px;
+  font-size: 1.4rem;
+}
+
+.footer a {
+  color: rgba(255, 255, 255, 0.74);
+  font-weight: 600;
+}
+
+.singlePostCard {
+  background-color: white;
+  padding: 40px;
+  margin: 40px auto 0;
+  width: 90%;
+  box-shadow: 2px 5px 10px rgba(88, 88, 88, 0.534);
+}
+
+.backgroundCard {
+  height: 300px;
+  padding-top: 100px;
+  text-align: center;
+  color: ghostwhite;
+  background-color: blueviolet;
+}
+
+.singleBgCard {
+  height: 480px;
+}
+
+.singleNegMargin {
+  margin-top: -360px;
+}
+
+.singleH1 {
+  color: white;
+}
+
+.authorDetails {
+  margin-bottom: 15px;
+  font-weight: bold;
+  line-height: 27px;
+  font-size: 1.5rem;
+}
+
+.content {
+  margin-top: 30px;
+}
+
+.badge {
+  border-radius: 20px;
+  background-color: rgb(49, 20, 209);
+  color: rgb(253, 253, 253);
+  padding: 2px 5px;
+  font-size: 1.4rem;
+}
+
+.cardContent {
+  border: 1px solid black;
+  border-left: none;
+  border-right: none;
+  padding: 15px 0;
+  margin: 15px 0 10px;
+  color: blueviolet;
+}
+
+.cardContent h1 {
+  font-size: 2rem;
+}
+
+.cardContent h2 {
+  font-size: 1.7rem;
+}
+
+.cardContent p {
+  font-size: 1.5rem;
+}
+
+div.small {
+  font-size: 1.4rem;
+  word-spacing: -3px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.smallBadge {
+  font-size: 1.2rem;
+}
+
+.content h1 {
+  font-size: 2.9rem;
+  font-weight: 600;
+}
+.content h2 {
+  font-size: 2.3rem;
+}
 
 .content p {
+  font-size: 1.6rem;
+  line-height: 27px;
+}
+.btnDiv {
+  font-size: 1.4rem;
+}
+.btnUpdate {
+  padding: 5px 10px;
+  border-radius: 3px;
+  color: rgb(0, 0, 0);
+  border: 2px solid rgb(28, 212, 11);
+  box-shadow: 1px 2px 10px rgba(255, 255, 255, 0.5);
+  transition: all 0.3s ease-in-out;
+}
+
+.btnUpdate:hover {
+  background-color: rgb(28, 212, 11);
+  color: white;
+  box-shadow: 1px 2px 10px rgba(100, 100, 100, 0.5);
+}
+.btnUpdate:active {
+  background-color: rgb(16, 150, 3);
+  border: 2px solid rgb(16, 150, 3);
+  box-shadow: 1px 2px 10px rgba(100, 100, 100, 0);
+}
+
+.btnDelete {
+  background-color: rgb(255, 0, 0);
+  padding: 5px 10px;
+  border: 2px solid red;
+  border-radius: 3px;
+  color: white;
+  cursor: pointer;
+  box-shadow: 1px 2px 10px rgba(100, 100, 100, 0.5);
+  margin-left: 10px;
+  transform: translateY(-5px);
+  transition: all 0.3s ease-in-out;
+}
+
+.btnDelete:hover {
+  background-color: rgb(212, 8, 8);
+  border-color: rgb(212, 8, 8);
+}
+
+.btnDelete:active {
+  box-shadow: none;
+  background-color: rgb(255, 69, 69);
+}
+
+.mainH1Hr {
+  width: 50%;
+  height: 3px;
+  background-color: blueviolet;
+  border: none;
+  margin: 0 auto;
+}
+
+h3 {
+  text-align: center;
+  margin: 15px auto 10px;
+  font-size: 2.6rem;
+  font-weight: 400;
+}
+
+h1.createH1 {
+  margin-top: 0px;
+  padding-top: 90px;
+}
+
+.createH1::after {
+  content: ' ';
+  display: block;
+  width: 50%;
+  height: 3px;
+  background-color: blueviolet;
+  margin: 10px auto;
+}
+
+.formCard {
+  box-shadow: 2px 3px 10px rgba(88, 88, 88, 0.534);
+  padding: 25px 35px;
+  width: 70%;
+  margin: 38px auto;
+  background-color: white;
+}
+
+.btnSubmit {
+  padding: 9px 35px;
+  background-color: blue;
+  color: white;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+label {
+  font-size: 1.8rem;
+  margin-bottom: 7px;
+}
+
+input {
+  padding: 8px 20px;
+  font-size: 1.7rem;
+}
+.text-muted {
+  opacity: 0.5;
+}
+
+.btnSignin {
+  font-size: 18px;
+  background-color: white;
+  padding: 6px 30px;
+  color: green;
+}
+
+.login .formCard {
+  width: 50%;
+  padding: 30px 50px;
+}
+
+.login .form-group {
+  margin-bottom: 20px;
+}
+
+.login .createH1 {
+  padding-top: 120px;
+}
+
+.loading {
+  margin-top: 80px;
+}
+.error {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+}
+
+.error h1 {
+  font-size: 13.4rem;
+}
+
+.error p {
+  font-size: 2.1rem;
+  margin: 16px auto;
+}
+
+.error .btnSubmit {
+  color: white;
+  border-radius: 8px;
+}
+
+/* Media Qurries */
+
+@media screen and (max-width: 1038px) {
+  .formCard {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 930px) {
+  .card {
+    width: 100%;
+  }
+  .login .formCard {
+    width: 80%;
+  }
+  div.home {
+    width: 75%;
+  }
+}
+
+@media screen and (max-width: 740px) {
+  .container {
+    width: 90%;
+  }
+
+  li.logo {
+    margin-right: 10px;
+  }
+  .singlePostCard {
+    width: 96%;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  html {
+    font-size: 50%;
+  }
+  .home p {
+    font-size: 1.6rem;
+    line-height: 20px;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .container {
+    width: 94%;
+  }
+
+  .singlePostCard {
+    width: 100%;
+    padding: 25px;
+  }
+
+  .content p {
     line-height: 23px;
+  }
+
+  .card {
+    width: 96%;
+  }
+  .formCard {
+    padding: 25px;
+  }
+
+  .login .formCard {
+    width: 97%;
+    padding: 40px 20px;
+  }
+
+  .btnSignin,
+  .btnSubmit {
+    width: 100%;
+    padding: 8px 30px;
+  }
+  .btnSubmit {
+    margin-top: 7px;
+  }
+
+  .nav-item {
+    font-size: 1.9rem;
+    padding: 19px 20px 17px;
+  }
+  .footer p {
+    padding: 13px 10px;
+    font-size: 1.4rem;
+  }
+  .error .btnSubmit {
+    width: auto;
+    padding: 10px 30px;
+  }
 }
 
-.card{
- width: 96%;
-}
-.formCard{
- padding: 25px;
-}
-
-
-.login .formCard{
- width: 97%;
- padding: 40px 20px;
-}
-
-.btnSignin,.btnSubmit{
- width: 100%;
- padding:8px 30px ;
-}
-.btnSubmit{
- margin-top: 7px;
-}
-
-
-    }
-
-
-   @media screen and (max-width:413px){
-   
-  div.home{
-   width: 90%;
+@media screen and (max-width: 413px) {
+  div.home {
+    width: 90%;
   }
   .backgroundCard {
-   padding-top: 70px;
+    padding-top: 88px;
+  }
 }
-  
- 
-  
-  
-      }
+
+@media screen and (max-width: 360px) {
+  .error h1 {
+    font-size: 7rem;
+  }
+  .error p {
+    font-size: 1.7rem;
+    margin: 8px auto;
+  }
+
+  .error .btnSubmit {
+    font-size: 1.5rem;
+  }
+}
