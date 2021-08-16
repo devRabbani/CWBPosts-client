@@ -319,7 +319,7 @@ input {
   font-size: 18px;
   background-color: white;
   padding: 6px 30px;
-  color: green;
+  color: rgb(28, 212, 11);
 }
 
 .login .formCard {
