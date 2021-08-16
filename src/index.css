@@ -1,3 +1,7 @@
+:root {
+  --color-primary: blueviolet;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -126,7 +130,7 @@ li.logo:hover {
   padding-top: 100px;
   text-align: center;
   color: ghostwhite;
-  background-color: blueviolet;
+  background-color: var(--color-primary);
 }
 
 .singleBgCard {
@@ -166,7 +170,7 @@ li.logo:hover {
   border-right: none;
   padding: 15px 0;
   margin: 15px 0 10px;
-  color: blueviolet;
+  color: var(--color-primary);
 }
 
 .cardContent h1 {
@@ -253,7 +257,7 @@ div.small {
 .mainH1Hr {
   width: 50%;
   height: 3px;
-  background-color: blueviolet;
+  background-color: var(--color-primary);
   border: none;
   margin: 0 auto;
 }
@@ -275,7 +279,7 @@ h1.createH1 {
   display: block;
   width: 50%;
   height: 3px;
-  background-color: blueviolet;
+  background-color: var(--color-primary);
   margin: 10px auto;
 }
 
