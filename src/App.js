@@ -98,7 +98,7 @@ const App = () => {
                   <div>
                     Published On :{' '}
                     <span className='badge smallBadge'>
-                      {new Date(post.createdAt).toLocaleString()}
+                      {new Date(post.createdAt).toDateString()}
                     </span>
                   </div>
                 </div>

@@ -15,7 +15,7 @@
       rel="stylesheet"
     />
     <link rel="manifest" href="manifest.json" />
-
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <title>CWBPosts</title>
   </head>
   <body>
@@ -27,9 +27,6 @@
           navigator.serviceWorker.register('/sw.js')
         })
       }
-      window.addEventListener('offline', () => {
-        document.documentElement.style.setProperty('--color-primary', '#9c9c9c')
-      })
     </script>
   </body>
 </html>
