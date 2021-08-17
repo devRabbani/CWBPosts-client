@@ -333,7 +333,7 @@ input {
 .btn {
   display: block;
   padding: 10px 30px;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   border-radius: 20px;
   width: fit-content;
   margin: 0 auto;
@@ -417,7 +417,7 @@ h1.topPaddingH1 {
 }
 
 .ml {
-  margin: 10px 0 10px auto;
+  margin: 13px 2px 13px auto;
   font-size: 1.7rem;
   padding: 10px 18px;
   background-color: rgb(85, 27, 221);
@@ -463,13 +463,17 @@ h1.topPaddingH1 {
 }
 
 .sideLogo {
-  font-size: 3.2rem;
-  font-weight: bold;
-  margin: 10px 23px 45px;
+  font-size: 4.4rem;
+  font-weight: 700;
+  padding: 10px 23px;
+  background-color: #9945e7;
+  margin: 0px 0px 60px;
 }
 .sideNav .nav-item {
-  font-size: 2.2rem;
+  font-size: 2.4rem;
   padding-left: 27px;
+  margin-top: 20px;
+  font-weight: bold;
 }
 
 .aboutPara {
@@ -485,12 +489,15 @@ h1.topPaddingH1 {
   background-color: rgba(128, 128, 128, 0.432);
   box-shadow: inset -5px 0 0px blueviolet;
   color: blueviolet;
-  font-weight: bold;
 }
 
 .bottomBorder {
   color: blueviolet;
   box-shadow: inset 0 -4px 0px blueviolet;
+}
+
+.whiteLink {
+  color: rgba(255, 255, 255, 0.932);
 }
 
 /* Media Qurries */
@@ -588,6 +595,13 @@ h1.topPaddingH1 {
   }
   .aboutPara {
     width: 90%;
+  }
+
+  h1.createH1 {
+    padding-top: 140px;
+  }
+  h1.topPaddingH1 {
+    padding-top: 150px;
   }
 }
 

@@ -16,9 +16,21 @@ const Sidebar = ({ history }) => {
       )}
       <div className={`sideNav ${sideOpen ? 'open' : ' '}`}>
         <div className='sideLogo'>
-          <NavLink to='/'>CWBPosts</NavLink>
+          <NavLink className='whiteLink' to='/'>
+            CWBPosts
+          </NavLink>
         </div>
         <ul className='sideBarUl'>
+          <li>
+            <NavLink
+              exact
+              activeClassName='activeLink'
+              className='nav-item'
+              to='/'
+            >
+              Home
+            </NavLink>
+          </li>
           <li>
             <NavLink
               activeClassName='activeLink'
