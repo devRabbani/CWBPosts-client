@@ -16,7 +16,7 @@ const Sidebar = ({ history }) => {
       )}
       <div className={`sideNav ${sideOpen ? 'open' : ' '}`}>
         <div className='sideLogo'>
-          <NavLink className='whiteLink' to='/'>
+          <NavLink onClick={handleClick} className='whiteLink' to='/'>
             CWBPosts
           </NavLink>
         </div>
@@ -24,6 +24,7 @@ const Sidebar = ({ history }) => {
           <li>
             <NavLink
               exact
+              onClick={() => setSideOpen(false)}
               activeClassName='activeLink'
               className='nav-item'
               to='/'
@@ -33,6 +34,7 @@ const Sidebar = ({ history }) => {
           </li>
           <li>
             <NavLink
+              onClick={() => setSideOpen(false)}
               activeClassName='activeLink'
               className='nav-item'
               to='/create'
@@ -43,6 +45,7 @@ const Sidebar = ({ history }) => {
 
           <li>
             <NavLink
+              onClick={() => setSideOpen(false)}
               activeClassName='activeLink'
               className='nav-item'
               to='/about'
@@ -53,6 +56,7 @@ const Sidebar = ({ history }) => {
 
           <li>
             <NavLink
+              onClick={() => setSideOpen(false)}
               activeClassName='activeLink'
               className='nav-item'
               to='/contact'

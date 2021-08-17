@@ -45,7 +45,7 @@ const Login = ({ history }) => {
       <div className='container'>
         <h1 className='h1 topPaddingH1'>LOGIN</h1>
         <div className='formCard'>
-          <form>
+          <form onSubmit={handleSubmit}>
             <div className='form-group'>
               <label className='text-muted'>Name</label>
               <input
@@ -72,9 +72,7 @@ const Login = ({ history }) => {
             </div>
 
             <div>
-              <button className='btnUpdate btnSignin' onClick={handleSubmit}>
-                Signin
-              </button>
+              <button className='btnUpdate btnSignin'>Signin</button>
             </div>
           </form>
         </div>
