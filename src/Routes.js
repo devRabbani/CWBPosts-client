@@ -16,14 +16,14 @@ const Routes = () => {
     <BrowserRouter>
       <Nav />
       <Switch>
-        <Route path='/' exact component={App} />
-        <PrivateRoute path='/create' exact component={Create} />
-        <Route path='/post/:slug' exact component={SinglePost} />
-        <PrivateRoute path='/post/update/:slug' exact component={UpdatePost} />
-        <Route path='/login' exact component={Login} />
-        <Route path='/about' exact component={About} />
-        <Route path='/contact' exact component={Contact} />
-        <Route path='*' component={Error} />
+        <Route exact path='/' component={App} />
+        <PrivateRoute path='/create' component={Create} />
+        <Route path='/post/:slug' component={SinglePost} />
+        <PrivateRoute path='/post/update/:slug' component={UpdatePost} />
+        <Route path='/login' component={Login} />
+        <Route path='/about' component={About} />
+        <Route path='/contact' component={Contact} />
+        <Route component={Error} />
       </Switch>
     </BrowserRouter>
   )
