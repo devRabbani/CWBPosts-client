@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import Nav from './nav'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
 import renderHTML from 'react-render-html'
@@ -12,7 +11,6 @@ const App = () => {
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(false)
 
-  console.count('count App')
   const fetchPost = () => {
     axios
       .get(`${process.env.REACT_APP_API}/post`)
@@ -51,7 +49,6 @@ const App = () => {
 
   return (
     <div>
-      <Nav />
       <ToTop />
       <div className='mainDiv'>
         <div className='backgroundCard'>

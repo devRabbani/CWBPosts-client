@@ -9,10 +9,12 @@ import Login from './login'
 import PrivateRoute from './privateRoute'
 import SinglePost from './singlePost'
 import UpdatePost from './updatePost'
+import Nav from './nav'
 
 const Routes = () => {
   return (
     <BrowserRouter>
+      <Nav />
       <Switch>
         <Route path='/' exact component={App} />
         <PrivateRoute path='/create' exact component={Create} />

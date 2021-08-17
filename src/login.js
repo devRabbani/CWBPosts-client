@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
-import Nav from './nav'
 import { authinticate, getUser } from './helper'
 import { withRouter } from 'react-router-dom'
 
@@ -43,7 +42,6 @@ const Login = ({ history }) => {
 
   return (
     <div className='login'>
-      <Nav />
       <div className='container'>
         <h1 className='h1 topPaddingH1'>LOGIN</h1>
         <div className='formCard'>

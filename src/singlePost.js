@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
-import Nav from './nav'
 import renderHTML from 'react-render-html'
 import Footer from './Footer'
 
@@ -39,7 +38,6 @@ const SinglePost = (props) => {
 
   return (
     <div>
-      <Nav />
       <div className='mainDiv'>
         <div className='backgroundCard singleBgCard'></div>
 

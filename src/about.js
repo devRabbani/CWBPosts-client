@@ -1,10 +1,8 @@
 import React from 'react'
-import Nav from './nav'
 
 const About = () => {
   return (
     <div>
-      <Nav />
       <div className='container'>
         <h1 className='h1 topPaddingH1'>About</h1>
         <p className='aboutPara'>

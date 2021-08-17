@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
-import Nav from './nav'
 import ReactQuill from 'react-quill'
 import 'react-quill/dist/quill.bubble.css'
 import { getToken } from './helper'
@@ -82,7 +81,6 @@ const UpdatePost = (props) => {
 
   return (
     <div>
-      <Nav />
       <div className='container mainDiv'>
         <h1 className='h1 createH1'>UPDATE POST</h1>
         <div className='formCard'>
