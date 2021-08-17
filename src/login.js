@@ -42,47 +42,45 @@ const Login = ({ history }) => {
   }, [])
 
   return (
-    <div className="login">
+    <div className='login'>
       <Nav />
-      <div className="container">
-      <h1 className='h1 createH1'>LOGIN</h1>
-      <div className="formCard">
-      <form>
-        <div className='form-group'>
-          <label className='text-muted'>Name</label>
-          <input
-            onChange={handleChange}
-            value={name}
-            type='text'
-            name='name'
-            placeholder='Enter Name'
-            required
-            className='form-control'
-          />
-        </div>
-        <div className='form-group'>
-          <label className='text-muted'>Password</label>
-          <input
-            type='password'
-            onChange={handleChange}
-            value={password}
-            name='password'
-            placeholder='Enter password'
-            required
-            className='form-control'
-          />
-        </div>
+      <div className='container'>
+        <h1 className='h1 topPaddingH1'>LOGIN</h1>
+        <div className='formCard'>
+          <form>
+            <div className='form-group'>
+              <label className='text-muted'>Name</label>
+              <input
+                onChange={handleChange}
+                value={name}
+                type='text'
+                name='name'
+                placeholder='Enter Name'
+                required
+                className='form-control'
+              />
+            </div>
+            <div className='form-group'>
+              <label className='text-muted'>Password</label>
+              <input
+                type='password'
+                onChange={handleChange}
+                value={password}
+                name='password'
+                placeholder='Enter password'
+                required
+                className='form-control'
+              />
+            </div>
 
-        <div>
-          <button className='btnUpdate btnSignin' onClick={handleSubmit}>
-            Signin
-          </button>
+            <div>
+              <button className='btnUpdate btnSignin' onClick={handleSubmit}>
+                Signin
+              </button>
+            </div>
+          </form>
         </div>
-      </form>
       </div>
-      
-      </div>
-      
     </div>
   )
 }
