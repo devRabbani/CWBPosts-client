@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react'
 import upLogo from './up.svg'
 
 const ToTop = () => {
-  console.count('count Top')
   const [scroll, setScroll] = useState(false)
 
   const handleScroll = () => {

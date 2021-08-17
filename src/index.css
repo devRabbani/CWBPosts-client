@@ -419,7 +419,7 @@ h1.topPaddingH1 {
   background-color: rgb(85, 27, 221);
   color: white;
   border-radius: 20px;
-  box-shadow: 2px 2px 5px rgba(59, 59, 59, 0.568);
+  box-shadow: -1px 3px 5px rgb(83 81 81 / 87%);
   transition: all 0.1s ease-out;
 }
 
@@ -434,7 +434,7 @@ h1.topPaddingH1 {
 
 .sideNav {
   height: 100vh;
-  width: 70%;
+  width: 65%;
   position: fixed;
   background-color: rgb(255, 255, 255);
   z-index: 200;
@@ -461,8 +461,9 @@ h1.topPaddingH1 {
   font-size: 4.4rem;
   font-weight: 700;
   padding: 10px 23px;
-  background-color: #9945e7;
+  background-color: blueviolet;
   margin: 0px 0px 60px;
+  box-shadow: 0 2px 2px #000000c2;
 }
 .sideNav .nav-item {
   font-size: 2.4rem;
