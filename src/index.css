@@ -500,6 +500,28 @@ h1.topPaddingH1 {
   color: rgba(255, 255, 255, 0.932);
 }
 
+.toTopLogo {
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  bottom: 15px;
+  right: 15px;
+  z-index: 5;
+  transform: scale(0);
+  opacity: 0;
+  transition: all 0.2s ease-in;
+  cursor: pointer;
+  padding: 3px;
+  box-shadow: 2px 3px 6px rgba(48, 47, 47, 0.56);
+  background-color: rgb(153 69 231);
+}
+
+.show {
+  transform: scale(1);
+  opacity: 1;
+}
+
 /* Media Qurries */
 
 @media screen and (max-width: 1038px) {

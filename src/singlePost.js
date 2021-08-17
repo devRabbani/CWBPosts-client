@@ -16,6 +16,7 @@ const SinglePost = (props) => {
       })
       .catch((err) => {
         alert('Did not find post Error!')
+        props.history.push('/')
       })
   }, [])
 

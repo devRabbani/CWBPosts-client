@@ -6,7 +6,7 @@ import 'react-quill/dist/quill.bubble.css'
 import { getUser, getToken } from './helper'
 import Footer from './Footer'
 
-const Create = () => {
+const Create = ({ history }) => {
   const [state, setState] = useState({
     title: '',
     user: getUser(),
@@ -53,7 +53,7 @@ const Create = () => {
       })
       .catch((error) => {
         console.log(error.response.data.error)
-        alert('Error occured try again')
+        history.push('/error')
       })
   }
 

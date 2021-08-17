@@ -5,12 +5,14 @@ import { Link } from 'react-router-dom'
 import renderHTML from 'react-render-html'
 import { getToken, getUser } from './helper'
 import Footer from './Footer'
+import ToTop from './toTop'
 
 const App = () => {
   const [posts, setPosts] = useState([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(false)
 
+  console.count('count App')
   const fetchPost = () => {
     axios
       .get(`${process.env.REACT_APP_API}/post`)
@@ -50,6 +52,7 @@ const App = () => {
   return (
     <div>
       <Nav />
+      <ToTop />
       <div className='mainDiv'>
         <div className='backgroundCard'>
           <div className='container home'>
