@@ -116,9 +116,11 @@ div.logo {
 
 .singlePostCard {
   background-color: white;
-  padding: 40px;
+  padding: 45px;
   margin: 40px auto 0;
   width: 90%;
+  border-bottom: 20px solid rgb(49, 20, 209);
+  border-top: 20px solid rgb(49, 20, 209);
   box-shadow: 2px 5px 10px rgba(88, 88, 88, 0.534);
 }
 
@@ -196,59 +198,19 @@ div.small {
 .content h1 {
   font-size: 2.9rem;
   font-weight: 600;
+  margin-bottom: 10px;
 }
 .content h2 {
   font-size: 2.3rem;
+  margin-bottom: 10px;
 }
 
 .content p {
   font-size: 1.6rem;
-  line-height: 27px;
+  line-height: 32px;
 }
 .btnDiv {
   font-size: 1.4rem;
-}
-.btnUpdate {
-  padding: 5px 10px;
-  border-radius: 3px;
-  color: rgb(0, 0, 0);
-  border: 2px solid rgb(28, 212, 11);
-  box-shadow: 1px 2px 10px rgba(255, 255, 255, 0.5);
-  transition: all 0.3s ease-in-out;
-}
-
-.btnUpdate:hover {
-  background-color: rgb(28, 212, 11);
-  color: white;
-  box-shadow: 1px 2px 10px rgba(100, 100, 100, 0.5);
-}
-.btnUpdate:active {
-  background-color: rgb(16, 150, 3);
-  border: 2px solid rgb(16, 150, 3);
-  box-shadow: 1px 2px 10px rgba(100, 100, 100, 0);
-}
-
-.btnDelete {
-  background-color: rgb(255, 0, 0);
-  padding: 5px 10px;
-  border: 2px solid red;
-  border-radius: 3px;
-  color: white;
-  cursor: pointer;
-  box-shadow: 1px 2px 10px rgba(100, 100, 100, 0.5);
-  margin-left: 10px;
-  transform: translateY(-5px);
-  transition: all 0.3s ease-in-out;
-}
-
-.btnDelete:hover {
-  background-color: rgb(212, 8, 8);
-  border-color: rgb(212, 8, 8);
-}
-
-.btnDelete:active {
-  box-shadow: none;
-  background-color: rgb(255, 69, 69);
 }
 
 .mainH1Hr {
@@ -289,6 +251,47 @@ h1.createH1 {
   background-color: white;
 }
 
+.btnDelete {
+  background-color: rgb(255, 0, 0);
+  padding: 5px 10px;
+  border: 2px solid red;
+  border-radius: 3px;
+  color: white;
+  cursor: pointer;
+  box-shadow: 1px 2px 10px rgba(100, 100, 100, 0.5);
+  margin-left: 10px;
+  transform: translateY(-5px);
+  transition: all 0.3s ease-in-out;
+}
+
+.btnDelete:hover {
+  background-color: rgb(212, 8, 8);
+  border-color: rgb(212, 8, 8);
+}
+
+.btnDelete:active {
+  box-shadow: none;
+  background-color: rgb(255, 69, 69);
+}
+.btnUpdate {
+  padding: 5px 10px;
+  border-radius: 3px;
+  color: rgb(0, 0, 0);
+  border: 2px solid rgb(28, 212, 11);
+  box-shadow: 1px 2px 10px rgba(255, 255, 255, 0.5);
+  transition: all 0.3s ease-in-out;
+}
+
+.btnUpdate:hover {
+  background-color: rgb(28, 212, 11);
+  color: white;
+  box-shadow: 1px 2px 10px rgba(100, 100, 100, 0.5);
+}
+.btnUpdate:active {
+  background-color: rgb(16, 150, 3);
+  border: 2px solid rgb(16, 150, 3);
+  box-shadow: 1px 2px 10px rgba(100, 100, 100, 0);
+}
 .btnSubmit {
   padding: 9px 35px;
   background-color: blue;
@@ -296,6 +299,40 @@ h1.createH1 {
   font-size: 17px;
   border: none;
   cursor: pointer;
+}
+
+.btnSignin {
+  font-size: 18px;
+  background-color: rgb(28, 212, 11);
+  width: 140px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border: none;
+  height: 36px;
+  cursor: pointer;
+}
+
+.greenBtn {
+  background-color: rgb(28, 212, 11);
+}
+
+.blueBtn {
+  background-color: blue;
+}
+
+.greenBtn:active {
+  background-color: rgba(28, 212, 11, 0.7);
+}
+
+.blueBtn:active {
+  background-color: rgba(0, 0, 255, 0.568);
+}
+
+.loader {
+  width: 100%;
+  height: 20px;
 }
 
 .form-group {
@@ -313,17 +350,11 @@ input {
   padding: 8px 20px;
   font-size: 1.7rem;
   width: auto;
+  opacity: 0.8;
   border: 1px solid rgba(0, 0, 0, 0.788);
 }
 .text-muted {
   opacity: 0.5;
-}
-
-.btnSignin {
-  font-size: 18px;
-  background-color: white;
-  padding: 6px 30px;
-  color: rgb(28, 212, 11);
 }
 
 .btn {
@@ -583,7 +614,7 @@ h1.topPaddingH1 {
   }
 
   .content p {
-    line-height: 23px;
+    line-height: 25px;
   }
 
   .card {

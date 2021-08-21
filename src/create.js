@@ -4,6 +4,7 @@ import ReactQuill from 'react-quill'
 import 'react-quill/dist/quill.bubble.css'
 import { getUser, getToken } from './helper'
 import Footer from './Footer'
+import ButtonLoading from './buttonLoading'
 
 const Create = ({ history }) => {
   const [state, setState] = useState({
@@ -11,6 +12,7 @@ const Create = ({ history }) => {
     user: getUser(),
   })
   const [content, setContent] = useState('')
+  const [loading, setLoading] = useState(false)
 
   const handleContent = (e) => {
     setContent(e)
@@ -25,6 +27,7 @@ const Create = ({ history }) => {
   }
 
   const handleSubmit = (e) => {
+    setLoading(true)
     const { title, user } = state
     e.preventDefault()
     axios
@@ -47,11 +50,12 @@ const Create = ({ history }) => {
           user: '',
         })
         setContent('')
-
+        setLoading(false)
         alert(`Sucessfully Created : ${res.data.title}`)
       })
       .catch((error) => {
         console.log(error.response.data.error)
+        setLoading(false)
         history.push('/error')
       })
   }
@@ -101,9 +105,10 @@ const Create = ({ history }) => {
                 className='form-control'
               />
             </div>
-            <div>
-              <button className='btnSubmit'>Submit</button>
-            </div>
+
+            <ButtonLoading color='blueBtn' loading={loading}>
+              Submit
+            </ButtonLoading>
           </form>
         </div>
       </div>

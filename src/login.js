@@ -2,12 +2,14 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import { authinticate, getUser } from './helper'
 import { withRouter } from 'react-router-dom'
+import ButtonLoading from './buttonLoading'
 
 const Login = ({ history }) => {
   const [state, setState] = useState({
     name: '',
     password: '',
   })
+  const [loading, setLoading] = useState(false)
 
   const { name, password } = state
 
@@ -20,6 +22,7 @@ const Login = ({ history }) => {
   }
 
   const handleSubmit = (e) => {
+    setLoading(true)
     const { name, password } = state
     e.preventDefault()
 
@@ -29,10 +32,12 @@ const Login = ({ history }) => {
         password,
       })
       .then((res) => {
+        setLoading(false)
         authinticate(res, () => history.push('/create'))
       })
       .catch((error) => {
         alert(error.response.data.error)
+        setLoading(false)
       })
   }
 
@@ -71,9 +76,9 @@ const Login = ({ history }) => {
               />
             </div>
 
-            <div>
-              <button className='btnUpdate btnSignin'>Signin</button>
-            </div>
+            <ButtonLoading color='greenBtn' loading={loading}>
+              Sign In
+            </ButtonLoading>
           </form>
         </div>
       </div>

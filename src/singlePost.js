@@ -5,7 +5,6 @@ import Footer from './Footer'
 
 const SinglePost = (props) => {
   const [post, setPost] = useState('')
-
   useEffect(() => {
     axios
       .get(`${process.env.REACT_APP_API}/post/${props.match.params.slug}`)

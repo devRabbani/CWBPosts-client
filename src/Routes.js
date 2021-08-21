@@ -18,8 +18,8 @@ const Routes = () => {
       <Switch>
         <Route exact path='/' component={App} />
         <PrivateRoute path='/create' component={Create} />
-        <Route path='/post/:slug' component={SinglePost} />
-        <PrivateRoute path='/post/update/:slug' component={UpdatePost} />
+        <Route exact path='/post/:slug' component={SinglePost} />
+        <PrivateRoute exact path='/post/update/:slug' component={UpdatePost} />
         <Route path='/login' component={Login} />
         <Route path='/about' component={About} />
         <Route path='/contact' component={Contact} />

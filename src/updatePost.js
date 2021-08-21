@@ -4,6 +4,7 @@ import ReactQuill from 'react-quill'
 import 'react-quill/dist/quill.bubble.css'
 import { getToken } from './helper'
 import Footer from './Footer'
+import ButtonLoading from './buttonLoading'
 
 const UpdatePost = (props) => {
   const [posts, setPosts] = useState({
@@ -12,7 +13,7 @@ const UpdatePost = (props) => {
     slug: '',
   })
   const [content, setContent] = useState('')
-
+  const [loading, setLoading] = useState(false)
   const handleContent = (e) => {
     setContent(e)
   }
@@ -26,6 +27,7 @@ const UpdatePost = (props) => {
   }
 
   const handleSubmit = (e) => {
+    setLoading(true)
     const { title, user, slug } = posts
     e.preventDefault()
     axios
@@ -51,10 +53,12 @@ const UpdatePost = (props) => {
           user,
           slug,
         })
+        setLoading(false)
         alert(`Sucessfully Updated : ${res.data.title}`)
         props.history.push('/')
       })
       .catch((error) => {
+        setLoading(false)
         alert(error.response)
         props.history.push('/error')
       })
@@ -84,7 +88,7 @@ const UpdatePost = (props) => {
       <div className='container mainDiv'>
         <h1 className='h1 createH1'>UPDATE POST</h1>
         <div className='formCard'>
-          <form>
+          <form onSubmit={handleSubmit}>
             <div className='form-group'>
               <label className='text-muted'>Title</label>
               <input
@@ -123,9 +127,9 @@ const UpdatePost = (props) => {
               />
             </div>
             <div>
-              <button className='btnSubmit' onClick={handleSubmit}>
+              <ButtonLoading color='blueBtn' loading={loading}>
                 Update
-              </button>
+              </ButtonLoading>
             </div>
           </form>
         </div>

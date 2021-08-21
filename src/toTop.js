@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import upLogo from './up.svg'
+import upLogo from './img/up.svg'
 
 const ToTop = () => {
   const [scroll, setScroll] = useState(false)

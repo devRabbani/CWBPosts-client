@@ -2,7 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 import { NavLink, withRouter } from 'react-router-dom'
 import { getUser, removeToken } from './helper'
-import menu from './menu.svg'
+import menu from './img/menu.svg'
 
 const Sidebar = ({ history }) => {
   const [sideOpen, setSideOpen] = useState(false)
