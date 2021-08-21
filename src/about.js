@@ -6,10 +6,12 @@ const About = () => {
       <div className='container'>
         <h1 className='h1 topPaddingH1'>About</h1>
         <p className='aboutPara'>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto
-          consectetur ea quas quam nisi, voluptatum, mollitia pariatur alias
-          quaerat voluptatem dolor eos quisquam sint fuga nihil tempora,
-          delectus eligendi incidunt!
+          CWBPosts is CanWeBe's official blogpost app and it is built in MERN
+          stack along with some great plugins.Here readers will read blogposts
+          about CWB's software and other things freely.It is a PWA with latest
+          features like background Sync,Push Notification,No refresh page reload
+          etc.In mobile view it will look and feel like native app.Everyone is
+          welcome here for any suggetions or contribution.
         </p>
 
         <a

@@ -12,9 +12,9 @@ const App = () => {
           <div className='container home'>
             <h1 className='h1'>Welcome To CWBPosts</h1>
             <p>
-              Here you will find some great articles about tech,study,lifestyle
-              etc.Feel free to contribute and read here, for more info connect
-              to CanWeBe.
+              Here you will find some great articles about tech, study,
+              lifestyle. Feel free to contribute and read here. For more info,
+              connect to CanWeBe.
             </p>
           </div>
         </div>
