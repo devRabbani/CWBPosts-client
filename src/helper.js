@@ -2,8 +2,8 @@
 
 export const authinticate = (res, next) => {
   if (window !== 'undefined') {
-    sessionStorage.setItem('token', JSON.stringify(res.data.token))
-    sessionStorage.setItem('userName', JSON.stringify(res.data.name))
+    localStorage.setItem('token', JSON.stringify(res.data.token))
+    localStorage.setItem('userName', JSON.stringify(res.data.name))
   }
   next()
 }
@@ -12,8 +12,8 @@ export const authinticate = (res, next) => {
 
 export const getToken = () => {
   if (window !== 'undefined') {
-    if (sessionStorage.getItem('token')) {
-      return JSON.parse(sessionStorage.getItem('token'))
+    if (localStorage.getItem('token')) {
+      return JSON.parse(localStorage.getItem('token'))
     } else {
       return false
     }
@@ -24,8 +24,8 @@ export const getToken = () => {
 
 export const getUser = () => {
   if (window !== 'undefined') {
-    if (sessionStorage.getItem('userName')) {
-      return JSON.parse(sessionStorage.getItem('userName'))
+    if (localStorage.getItem('userName')) {
+      return JSON.parse(localStorage.getItem('userName'))
     } else {
       return false
     }
@@ -36,8 +36,8 @@ export const getUser = () => {
 
 export const removeToken = (next) => {
   if (window !== 'undefined') {
-    sessionStorage.removeItem('token')
-    sessionStorage.removeItem('userName')
+    localStorage.removeItem('token')
+    localStorage.removeItem('userName')
   }
   next()
 }
