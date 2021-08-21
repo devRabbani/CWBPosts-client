@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import renderHTML from 'react-render-html'
 import Footer from './Footer'
+import { Helmet } from 'react-helmet'
 
 const SinglePost = (props) => {
   const [post, setPost] = useState('')
@@ -37,6 +38,9 @@ const SinglePost = (props) => {
 
   return (
     <div>
+      <Helmet>
+        <title>{post.title}</title>
+      </Helmet>
       <div className='mainDiv'>
         <div className='backgroundCard singleBgCard'></div>
         {post ? showPost() : <h3 className='loadingPost'>Loading...</h3>}
