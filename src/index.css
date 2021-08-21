@@ -322,11 +322,11 @@ h1.createH1 {
   background-color: blue;
 }
 
-.greenBtn:active {
+.greenBtn.btnFade {
   background-color: rgba(28, 212, 11, 0.7);
 }
 
-.blueBtn:active {
+.blueBtn.btnFade {
   background-color: rgba(0, 0, 255, 0.568);
 }
 

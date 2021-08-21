@@ -3,7 +3,7 @@ import Loader from './img/loading.svg'
 
 const ButtonLoading = ({ loading, children, color }) => {
   return (
-    <button className={`btnSignin ${color}`}>
+    <button className={`btnSignin ${color} ${loading ? 'btnFade' : ''}`}>
       {!loading ? (
         children
       ) : (

@@ -59,7 +59,7 @@ const UpdatePost = (props) => {
       })
       .catch((error) => {
         setLoading(false)
-        alert(error.response)
+        alert(error.response.data)
         props.history.push('/error')
       })
   }
