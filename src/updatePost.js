@@ -87,52 +87,56 @@ const UpdatePost = (props) => {
     <div>
       <div className='container mainDiv'>
         <h1 className='h1 createH1'>UPDATE POST</h1>
-        <div className='formCard'>
-          <form onSubmit={handleSubmit}>
-            <div className='form-group'>
-              <label className='text-muted'>Title</label>
-              <input
-                onChange={handleChange}
-                value={posts.title}
-                type='text'
-                name='title'
-                placeholder='Title'
-                required
-                className='form-control'
-              />
-            </div>
-            <div className='form-group'>
-              <label className='text-muted'>Content</label>
-              <ReactQuill
-                onChange={handleContent}
-                value={content}
-                theme='bubble'
-                name='content'
-                placeholder='Type your content'
-                required
-                className='pb-5 mb-3'
-                style={{ border: '1px solid #666' }}
-              />
-            </div>
-            <div className='form-group'>
-              <label className='text-muted'>User</label>
-              <input
-                onChange={handleChange}
-                value={posts.user}
-                type='text'
-                name='user'
-                placeholder='Username'
-                required
-                className='form-control'
-              />
-            </div>
-            <div>
-              <ButtonLoading color='blueBtn' loading={loading}>
-                Update
-              </ButtonLoading>
-            </div>
-          </form>
-        </div>
+        {!content ? (
+          <h3 className='loading'>Loading...</h3>
+        ) : (
+          <div className='formCard'>
+            <form onSubmit={handleSubmit}>
+              <div className='form-group'>
+                <label className='text-muted'>Title</label>
+                <input
+                  onChange={handleChange}
+                  value={posts.title}
+                  type='text'
+                  name='title'
+                  placeholder='Title'
+                  required
+                  className='form-control'
+                />
+              </div>
+              <div className='form-group'>
+                <label className='text-muted'>Content</label>
+                <ReactQuill
+                  onChange={handleContent}
+                  value={content}
+                  theme='bubble'
+                  name='content'
+                  placeholder='Type your content'
+                  required
+                  className='pb-5 mb-3'
+                  style={{ border: '1px solid #666' }}
+                />
+              </div>
+              <div className='form-group'>
+                <label className='text-muted'>User</label>
+                <input
+                  onChange={handleChange}
+                  value={posts.user}
+                  type='text'
+                  name='user'
+                  placeholder='Username'
+                  required
+                  className='form-control'
+                />
+              </div>
+              <div>
+                <ButtonLoading color='blueBtn' loading={loading}>
+                  Update
+                </ButtonLoading>
+              </div>
+            </form>
+          </div>
+        )}
       </div>
       <Footer />
     </div>

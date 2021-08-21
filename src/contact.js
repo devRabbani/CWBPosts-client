@@ -10,7 +10,7 @@ const Contact = () => {
           brilient developers and designers.We frequently deliver some of the
           great software to the industry.If you want to join our team or want to
           contribute to this blog app please contact us and get your username
-          and password
+          and password.
         </p>
 
         <a

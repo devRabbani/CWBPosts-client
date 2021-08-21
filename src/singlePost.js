@@ -39,8 +39,7 @@ const SinglePost = (props) => {
     <div>
       <div className='mainDiv'>
         <div className='backgroundCard singleBgCard'></div>
-
-        {post && showPost()}
+        {post ? showPost() : <h3 className='loadingPost'>Loading...</h3>}
       </div>
       <Footer />
     </div>
