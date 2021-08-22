@@ -3,7 +3,7 @@
 Here you will find some great articles about tech, study, lifestyle. Feel free to contribute and read here. For more info, connect to CanWeBe.
 
 
-[CWBPosts](https://cwbposts.netlify.app)
+[Go to CWBPosts live](https://cwbposts.netlify.app)
 
 
 ## Available Scripts
