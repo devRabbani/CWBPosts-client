@@ -24,6 +24,8 @@ h1.h1 {
 }
 h2.h2 {
   font-size: 2.9rem;
+  border-bottom: 1px solid black;
+  padding-bottom: 10px;
 }
 .home p {
   font-size: 1.6rem;
@@ -145,7 +147,6 @@ div.logo {
 }
 
 .authorDetails {
-  margin-bottom: 15px;
   font-weight: bold;
   line-height: 27px;
   font-size: 1.5rem;
@@ -164,20 +165,17 @@ div.logo {
 }
 
 .cardContent {
-  border: 1px solid black;
-  border-left: none;
-  border-right: none;
-  padding: 15px 0;
   margin: 15px 0 10px;
+  margin-left: 10px;
   color: blueviolet;
 }
 
 .cardContent h1 {
-  font-size: 2rem;
+  font-size: 2.2rem;
 }
 
 .cardContent h2 {
-  font-size: 1.7rem;
+  font-size: 1.8rem;
 }
 
 .cardContent p {
@@ -196,7 +194,7 @@ div.small {
 }
 
 .content h1 {
-  font-size: 2.9rem;
+  font-size: 3.2rem;
   font-weight: 600;
   margin-bottom: 10px;
 }
@@ -205,12 +203,16 @@ div.small {
   margin-bottom: 10px;
 }
 
+.content blockquote {
+  font-size: 1.3rem;
+}
 .content p {
   font-size: 1.6rem;
   line-height: 32px;
 }
 .btnDiv {
   font-size: 1.4rem;
+  margin-top: 16px;
 }
 
 .mainH1Hr {
@@ -645,7 +647,26 @@ h1.topPaddingH1 {
 
   .card {
     width: 96%;
+    padding: 20px 15px;
   }
+
+  .cardContent {
+    margin: 6px 0;
+  }
+
+  .btnDiv {
+    margin: 16px 0 6px;
+  }
+
+  div.small {
+    font-size: 1.2rem;
+  }
+
+  .smallBadge {
+    font-size: 1rem;
+    padding: 3px 5px;
+  }
+
   .formCard {
     padding: 25px;
   }
