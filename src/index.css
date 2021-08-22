@@ -64,7 +64,7 @@ ul.nav {
 .nav-item {
   font-size: 1.8rem;
   padding: 20px 20px 18px;
-  transition: all 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
   display: block;
 }
 
@@ -260,7 +260,7 @@ h1.createH1 {
   cursor: pointer;
   box-shadow: 1px 2px 10px rgba(100, 100, 100, 0.5);
   margin-left: 10px;
-  transform: translateY(-5px);
+  display: inline;
   transition: all 0.3s ease-in-out;
 }
 
