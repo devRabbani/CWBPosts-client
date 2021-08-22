@@ -91,12 +91,12 @@ const Directory = () => {
                 <Link to={`/post/update/${post.slug}`} className='btnUpdate'>
                   Update
                 </Link>
-                <a
+                <div
                   onClick={() => handleDelete(post.slug)}
                   className='btnDelete'
                 >
                   Delete
-                </a>
+                </div>
               </div>
             )}
           </div>
