@@ -2,9 +2,11 @@
 
 Here you will find some great articles about tech, study, lifestyle. Feel free to contribute and read here. For more info, connect to CanWeBe.
 
-
 [Go to CWBPosts live](https://cwbposts.netlify.app)
 
+### For this project environment setup
+
+`REACT_APP_API`=Your Api (Check out CWBPosts Server Repo)
 
 ## Available Scripts
 
