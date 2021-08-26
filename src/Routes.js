@@ -1,15 +1,15 @@
 import React, { lazy, Suspense } from 'react'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
-import About from './about'
-import App from './App'
-import Contact from './contact'
+
 import Nav from './nav'
-import Spinner from './spinner'
 
 const PrivateRoute = lazy(() => import('./privateRoute'))
 const Login = lazy(() => import('./login'))
 const Create = lazy(() => import('./create'))
 const Error = lazy(() => import('./Error'))
+const About = lazy(() => import('./about'))
+const App = lazy(() => import('./App'))
+const Contact = lazy(() => import('./contact'))
 const SinglePost = lazy(() => import('./singlePost'))
 const UpdatePost = lazy(() => import('./updatePost'))
 
@@ -17,7 +17,7 @@ const Routes = () => {
   return (
     <BrowserRouter>
       <Nav />
-      <Suspense fallback={<Spinner />}>
+      <Suspense fallback={null}>
         <Switch>
           <Route exact path='/' component={App} />
           <Route path='/login' component={Login} />
