@@ -23,13 +23,16 @@ const SinglePost = (props) => {
     <div className='container singleNegMargin'>
       <h1 className='singleH1 h1'>{post.title}</h1>
       <div className='singlePostCard'>
-        <p className='authorDetails'>
-          Author : <span className='badge'>{post.user}</span>
-          <br /> Published On :{' '}
-          <span className='badge'>
-            {new Date(post.createdAt).toDateString()}
-          </span>
-        </p>
+        <div className='authorDetails'>
+          <div className='authorImage'></div>
+          <div className='logoGroup'>
+            <span className='badge user'>{post.user}</span>
+
+            <span className='badge date'>
+              {new Date(post.createdAt).toDateString()}
+            </span>
+          </div>
+        </div>
         <hr />
         <div className='content'>{renderHTML(post.content)}</div>
       </div>
