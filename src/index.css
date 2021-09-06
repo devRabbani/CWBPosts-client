@@ -9,7 +9,7 @@ html {
   font-size: 62.5%;
 }
 body {
-  font-family: 'Roboto Mono', monospace;
+  font-family: 'Merriweather', serif;
   background-color: aliceblue;
 }
 a {
@@ -24,7 +24,7 @@ h1.h1 {
 }
 h2.h2 {
   font-size: 2.9rem;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #000000cc;
   padding-bottom: 10px;
 }
 .home p {
@@ -146,73 +146,86 @@ div.logo {
   color: white;
 }
 
-.authorDetails {
-  font-weight: bold;
-  line-height: 27px;
-  font-size: 1.5rem;
-}
-
 .content {
   margin-top: 30px;
 }
 
+.authorDetails {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.singlePostCard .authorDetails {
+  margin-bottom: 10px;
+  margin-top: 0;
+}
+
+.authorImage {
+  width: 50px;
+  height: 50px;
+  background-color: #777;
+  border-radius: 50%;
+}
+
+.logoGroup {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+}
+
 .badge {
-  border-radius: 20px;
-  background-color: rgb(49, 20, 209);
-  color: rgb(253, 253, 253);
-  padding: 2px 5px;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.user.badge {
+  color: #000000cc;
+}
+.date.badge {
+  color: #0000008a;
 }
 
 .cardContent {
   margin: 15px 0 10px;
-  margin-left: 10px;
-  color: blueviolet;
 }
 
-.cardContent h1 {
-  font-size: 2.2rem;
-}
-
-.cardContent h2 {
-  font-size: 1.8rem;
-}
-
-.cardContent p {
+.cardContent h1,
+.cardContent p,
+.cardContent h2,
+.cardContent a,
+.cardContent strong {
   font-size: 1.5rem;
-}
-
-div.small {
-  font-size: 1.4rem;
-  word-spacing: -3px;
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.smallBadge {
-  font-size: 1.2rem;
+  font-weight: 400;
+  color: #777;
 }
 
 .content h1 {
   font-size: 3.2rem;
   font-weight: 600;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
+  color: #111111;
 }
 .content h2 {
   font-size: 2.3rem;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
+  color: #111111;
 }
 
 .content blockquote {
   font-size: 1.3rem;
+  color: #222222;
 }
 .content p {
-  font-size: 1.6rem;
-  line-height: 32px;
+  font-size: 1.8rem;
+  line-height: 1.8;
+  word-spacing: 4px;
+  color: #222222;
 }
 .btnDiv {
-  font-size: 1.4rem;
-  margin-top: 16px;
+  font-size: 1.6rem;
+  margin-left: auto;
+  margin-top: 5px;
 }
 
 .mainH1Hr {
@@ -255,13 +268,13 @@ h1.createH1 {
 
 .btnDelete {
   background-color: rgb(255, 0, 0);
-  padding: 5px 10px;
+  padding: 6px 12px;
   border: 2px solid red;
   border-radius: 3px;
   color: white;
   cursor: pointer;
   box-shadow: 1px 2px 10px rgba(100, 100, 100, 0.5);
-  margin-left: 10px;
+  margin-left: 15px;
   display: inline;
   transition: all 0.3s ease-in-out;
 }
@@ -276,7 +289,7 @@ h1.createH1 {
   background-color: rgb(255, 69, 69);
 }
 .btnUpdate {
-  padding: 5px 10px;
+  padding: 6px 12px;
   border-radius: 3px;
   color: rgb(0, 0, 0);
   border: 2px solid rgb(28, 212, 11);
@@ -354,6 +367,10 @@ input {
   width: auto;
   opacity: 0.8;
   border: 1px solid rgba(0, 0, 0, 0.788);
+}
+
+div.ql-container {
+  font-size: 2.3rem;
 }
 .text-muted {
   opacity: 0.5;
@@ -628,21 +645,18 @@ h1.topPaddingH1 {
   }
   .toTopLogo {
     bottom: 30px;
+    right: 20px;
   }
 }
 
 @media screen and (max-width: 430px) {
   .container {
-    width: 94%;
+    width: 95%;
   }
 
   .singlePostCard {
     width: 100%;
-    padding: 25px;
-  }
-
-  .content p {
-    line-height: 25px;
+    padding: 20px;
   }
 
   .card {
@@ -654,17 +668,14 @@ h1.topPaddingH1 {
     margin: 6px 0;
   }
 
-  .btnDiv {
-    margin: 16px 0 6px;
+  .btnDiv .btnDelete,
+  .card .logoGroup {
+    margin-left: 6px;
   }
 
-  div.small {
-    font-size: 1.2rem;
-  }
-
-  .smallBadge {
-    font-size: 1rem;
-    padding: 3px 5px;
+  .card .authorImage {
+    width: 40px;
+    height: 40px;
   }
 
   .formCard {
@@ -701,10 +712,13 @@ h1.topPaddingH1 {
   }
 
   h1.createH1 {
-    padding-top: 140px;
+    padding-top: 105px;
   }
   h1.topPaddingH1 {
     padding-top: 150px;
+  }
+  .mainDiv {
+    min-height: 89vh;
   }
 }
 

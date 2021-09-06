@@ -87,7 +87,6 @@ const Create = ({ history }) => {
                 value={content}
                 style={{
                   border: '1px solid #666',
-                  padding: '7px',
                   minHeight: '150px',
                 }}
                 theme='bubble'

@@ -57,49 +57,50 @@ const Directory = () => {
         <h3 className='loading'>Loading...</h3>
       ) : (
         posts.map((post, i) => (
-          <div
-            key={i}
-            className='card'
-            style={{ borderBottom: '1px solid silver' }}
-          >
-            <div className='previewPost'>
-              <Link to={`/post/${post.slug}`}>
+          <Link to={`/post/${post.slug}`}>
+            <div
+              key={i}
+              className='card'
+              style={{ borderBottom: '1px solid silver' }}
+            >
+              <div className='previewPost'>
                 <h2 className='h2'>{post.title}</h2>
-              </Link>
-              <div className='cardContent'>
-                {renderHTML(
-                  post.content.substring(0, 150) +
-                    (post.content.length > 200 ? '....' : '')
+
+                <div className='cardContent'>
+                  {renderHTML(
+                    post.content.substring(0, 150) +
+                      (post.content.length > 200 ? '....' : '')
+                  )}
+                </div>
+              </div>
+              <div className='authorDetails'>
+                <div className='authorImage'></div>
+                <div className='logoGroup'>
+                  <span className='badge user'>{post.user}</span>
+
+                  <span className='badge date'>
+                    {new Date(post.createdAt).toDateString()}
+                  </span>
+                </div>
+                {getUser() && (
+                  <div className='btnDiv'>
+                    <Link
+                      to={`/post/update/${post.slug}`}
+                      className='btnUpdate'
+                    >
+                      Update
+                    </Link>
+                    <div
+                      onClick={() => handleDelete(post.slug)}
+                      className='btnDelete'
+                    >
+                      Delete
+                    </div>
+                  </div>
                 )}
               </div>
             </div>
-            <div className='authorDetails small'>
-              <div>
-                Author : <span className='badge smallBadge'>{post.user}</span>
-                ,&nbsp;
-              </div>
-              <div>
-                Published On :{' '}
-                <span className='badge smallBadge'>
-                  {new Date(post.createdAt).toDateString()}
-                </span>
-              </div>
-            </div>
-
-            {getUser() && (
-              <div className='btnDiv'>
-                <Link to={`/post/update/${post.slug}`} className='btnUpdate'>
-                  Update
-                </Link>
-                <div
-                  onClick={() => handleDelete(post.slug)}
-                  className='btnDelete'
-                >
-                  Delete
-                </div>
-              </div>
-            )}
-          </div>
+          </Link>
         ))
       )}
     </React.Fragment>
